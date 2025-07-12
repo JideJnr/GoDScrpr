@@ -36,7 +36,4 @@ services:
     plan: free
     region: oregon
     ipAllowList:
-      - sourceType: service
-        service: godcomplex-api
-      - sourceType: service
-        service: godcomplex-bot
+      - cidrBlock: 0.0.0.0/0  # 🟡 TEMPORARY for development — open to all
