@@ -6,7 +6,7 @@ export const predictionsOverview = async (req:Request, res:Response) => {
     try {
       const { uid, role } = req.user;
   
-  
+      
       res.status(200).json({
         success: true,
         data: {
