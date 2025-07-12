@@ -35,5 +35,3 @@ services:
     name: godcomplex-redis
     plan: free
     region: oregon
-    ipAllowList:
-      - cidrBlock: 0.0.0.0/0  # 🟡 TEMPORARY for development — open to all
