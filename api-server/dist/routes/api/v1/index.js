@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const auth_routes_js_1 = __importDefault(require("./auth.routes.js"));
+const activity_routes_js_1 = __importDefault(require("./activity.routes.js"));
+const activity_routes_js_2 = __importDefault(require("./activity.routes.js"));
+const bot_routes_js_1 = __importDefault(require("./bot.routes.js"));
+const match_routes_js_1 = __importDefault(require("./match.routes.js"));
+const prediction_routes_js_1 = __importDefault(require("./prediction.routes.js"));
+const router = express_1.default.Router();
+router.use('/auth', auth_routes_js_1.default);
+router.use('/activities', activity_routes_js_1.default);
+router.use('/analytics', activity_routes_js_2.default);
+router.use('/bot', bot_routes_js_1.default);
+router.use('/match', match_routes_js_1.default);
+router.use('/prediction', prediction_routes_js_1.default);
+exports.default = router;
